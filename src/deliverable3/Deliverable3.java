@@ -26,6 +26,9 @@ public class Deliverable3 {
             System.out.println("Enter the name of player 2");
             String p2 = sc.nextLine();
             // Add your game initialization and logic here
+             CardComparator cardComparator = new DefaultCardComparator();
+             WarGame warGame = new WarGame(cardComparator, new Player(p1), new Player(p2));
+             warGame.play();
         } else if (input.equalsIgnoreCase("N")) {
             System.out.println("Maybe next time. Have a good day!");
             // You can exit the program or perform any other actions here
@@ -36,7 +39,7 @@ public class Deliverable3 {
 
         sc.close();
 
-        
+    }
    
 }
-}
+    
